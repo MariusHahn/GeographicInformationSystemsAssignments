@@ -88,7 +88,7 @@ WHERE p.building like 'cathedral';
 
 #### Discussion
 
-Taking the query from above with the cathedral and select the University of Konstanz by its name, we can locate by its name. Then I put *way* of both results into the `ST_DISTANCE` Function, which returns the shortest distance between the two polygons.
+Taking the query from above with the cathedral and select the University of Konstanz by its name, we can locate both. Then I put *way* of both results into the `ST_DISTANCE` Function, which returns the shortest distance between the two polygons.
 
 #### Query
 
@@ -120,7 +120,7 @@ from  distance_uni_cathedral;
 
 #### Discussion
 
-The *konstanz_city* polygon selects the city area of Konstanz. By looking for amenity *bar* and *pub* we  in the planet_osm_point table we get all bars and pubs. Now we have to look which of them are in the Konstanz city area. This is done with the join below on behalf of the `st_contains` function. 
+The *konstanz_city* polygon selects the city area of Konstanz. By looking for amenity *bar* and *pub*  in the planet_osm_point table we get all bars and pubs. Now we have to look which of them are in the Konstanz city area. This is done with the join below on behalf of the `st_contains` function. 
 
 #### Query
 
